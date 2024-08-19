@@ -18,7 +18,7 @@ def exists_check(method):
         if self.use_exists_check:
             if not self.cfg_path.exists():
                 raise FileNotFoundError(f'{self.cfg_path} does not exist')
-            return method(self, *args, **kwargs)
+        return method(self, *args, **kwargs)
     return wrapper
 
 
